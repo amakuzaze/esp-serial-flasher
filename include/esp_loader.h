@@ -18,6 +18,13 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#ifdef ESP_PLATFORM
+#include <sdkconfig.h>
+#if defined(CONFIG_ESP_SERIAL_FLASHER_MD5_ENABLED) && !defined(MD5_ENABLED)
+#define MD5_ENABLED 1
+#endif
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
