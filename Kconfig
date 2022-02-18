@@ -1,0 +1,8 @@
+menu "ESP Serial Flasher"
+
+config ESP_SERIAL_FLASHER_MD5_ENABLED
+    bool
+    prompt "Allow MD5 verification of flashed data"
+    default n
+
+endmenu
